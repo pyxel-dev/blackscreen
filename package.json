@@ -1,0 +1,8 @@
+{
+  "name": "@pyxeldev/blackscreen",
+  "version": "1.0.0",
+  "description": "Just a black web page",
+  "author": "Kevin Py",
+  "license": "MIT",
+  "keywords": ["black", "screen", "app"]
+}
