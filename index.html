@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Screen | pyxel.dev</title>
-  <style>
-    html {
-      background-color: black;
-    }
-  </style>
+  <title>Black Screen</title>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='description' content='Just a black web page'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel='canonical' href='https://blackscreen.app/'>
+  <link rel="manifest" href="manifest.webapp">
+  <link rel="stylesheet" href="style.css">
+  <meta name='mobile-web-app-capable' content='yes'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='application-name' content='Black screen'>
+  <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+  <meta name='apple-mobile-web-app-title' content='Black screen'>
+  <link rel='icon' sizes='192x192' href='/images/icon-192x192.png'>
+  <link rel='apple-touch-icon' href='/images/icon-192x192.png'>
+  <meta name='msapplication-TileImage' content='/images/icon-144x144.png'>
+  <meta name='msapplication-TileColor' content='#000000'>
+  <meta name='theme-color' content='#000000'>
+  <meta property='og:title' content='Black screen'>
+  <meta property='og:type' content='website'>
+  <meta property='og:image' content='https://blackscreen.app/images/icon-192x192.png'>
+  <meta property='og:url' content='https://blackscreen.app'>
+  <meta property='og:description' content='Just a black web page'>
+  <meta name='twitter:card' content='summary'>
+  <meta name='twitter:url' content='https://blackscreen.app'>
+  <meta name='twitter:title' content='Black screen'>
+  <meta name='twitter:description' content='Just a black web page'>
+  <meta name='twitter:image' content='https://blackscreen.app/images/icon-192x192.png'>
+  <meta name='twitter:creator' content='@pyxeldev'>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180964950-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-180964950-1');
+  </script>
 </head>
 <body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        .then(function (registration) {
+          console.log('Service Worker Registered');
+        });
+  
+      navigator.serviceWorker.ready.then(function (registration) {
+        console.log('Service Worker Ready');
+      });
+    }
+  </script>
 </body>
 </html>
