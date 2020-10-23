@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <title>Black Screen</title>
@@ -9,7 +8,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel='canonical' href='https://blackscreen.app/'>
-  <link rel="manifest" href="manifest.webapp">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
   <meta name='mobile-web-app-capable' content='yes'>
   <meta name='apple-mobile-web-app-capable' content='yes'>
@@ -41,7 +40,7 @@
   </script>
 </head>
 <body>
-  <script>
+  <script type="module">
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js', { scope: '/' })
         .then(function (registration) {
